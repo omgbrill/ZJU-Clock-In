@@ -120,7 +120,8 @@ class ClockIn(object):
         new_info['gwszdd'] = ""
         new_info['szgjcs'] = ""
         new_info['verifyCode'] = self.get_captcha()
-
+        # 2022.07.05
+        new_info['internship'] = 3  # 今日是否进行实习或实践
         # 2021.08.05 Fix 2
         magics = re.findall(r'"([0-9a-f]{32})":\s*"([^\"]+)"', html)
         for item in magics:
